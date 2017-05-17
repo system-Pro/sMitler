@@ -28,6 +28,13 @@
 			width: 100%
 		.callback
 			padding: 12% 0
+	.partners
+		.owl-nav
+			> div
+				&.owl-prev
+					left: -30px
+				&.owl-next
+					right: -30px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -39,7 +46,16 @@
 		padding: 12px 36px
 	.quotes
 		display: none
-
+	.partners
+		.owl-nav
+			> div
+				&.owl-prev
+					left: -2.1%
+				&.owl-next
+					right: -2.1%
+	.s-partners
+		.h2
+			margin: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.welcome
@@ -56,6 +72,14 @@
 				font-size: 14px
 	.header-contacts
 		font-size: 11.5px
+	// .partners
+	// 	.owl-nav
+	// 		> div
+	// 			// display: none
+	// 			&.owl-prev
+	// 				left: 0
+	// 			&.owl-next
+	// 				right: 0
 	// .carousel-services-image
 	// 	opacity: 1
 

@@ -383,8 +383,8 @@ body.ishome .carousel-logo .logo-first, body.ishome .carousel-logo .logo-second
 		// width: 50%
 		// position: absolute
 		// left: 0
-		background-position: 10%
-		// background-position: left
+		// background-position: 10%
+		background-position: left
 		&:before
 			content: ""
 			width: 50%
@@ -395,6 +395,13 @@ body.ishome .carousel-logo .logo-first, body.ishome .carousel-logo .logo-second
 			// background-color: $accent
 		&.inverse
 			background-color: white
+	&-partners.section-overlay
+		&:before
+			background-color: #fff
+		.h2
+			margin-top: 10px
+			span
+				color: $accent
 
 
 .section-overlay
@@ -599,6 +606,48 @@ select
 		top: 182px
 		right: -60px
 
-
+// .owl-carousel .owl-item img
+// 	// display: inline-block
+// 	width: 100px
+// 	height: auto
+.partners
+	.partner
+		height: 100%
+		display: flex
+		margin: auto
+	.owl-stage
+		display: flex
+	.owl-item
+		text-align: center
+		margin: 30px 20px 0 20px
+		display: inline-block
+		vertical-align: middle
+		height: auto
+		img
+			max-width: 100%
+			width: auto
+			display: inline-block
+			margin: auto
+			vertical-align: middle
+			max-height: 60px
+	.owl-nav
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 2
+		// overflow: hidden
+		> div
+			position: absolute
+			top: 30px
+			color: #999
+			font-size: 30px
+			transition: opacity .5s ease
+			padding: 0 10px
+			&:hover
+				opacity: .6
+			&.owl-prev
+				left: -60px
+			&.owl-next
+				right: -60px
 
 @import "media" // Всегда в конце
