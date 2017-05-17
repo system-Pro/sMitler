@@ -20,7 +20,7 @@ $(function () {
 
 	// OWL CAROUSEL
 	$('.carousel-services').on('initialized.owl.carousel', function () {
-		setTimeout(function(){
+		setTimeout(function () {
 			carouselService()
 		}, 100);
 	});
@@ -71,11 +71,31 @@ $(function () {
 		ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
 	});
 
+	$('select').selectize({});
 
-	function onResize(){
+	//E-mail Ajax Send
+	$("form.callback").submit(function () { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function () {
+			// alert("Thank you!");
+			$(th).find('.success').addClass('active').css('display', 'flex').hide().fadeIn();
+			setTimeout(function () {
+				// Done Functions
+				$(th).find('.success').removeClass('active').fadeOut();
+				th.trigger("reset");
+			}, 3000);
+		});
+		return false;
+	});
+
+	function onResize() {
 		$('.carousel-services-content').equalHeights();
-	}onResize();
-	window.onresize = function(){
+	} onResize();
+	window.onresize = function () {
 		onResize()
 	}
 
