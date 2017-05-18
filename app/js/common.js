@@ -145,7 +145,12 @@ $(function () {
 
 });
 
+var timer = setTimeout(function(){
+	$('.preloader').fadeOut('slow');
+	console.log('timer');
+}, 5000);
 
 $(window).on('load', function(){
+	clearTimeout(timer);
 	$('.preloader').delay(1000).fadeOut('slow');
 })
